@@ -1,0 +1,85 @@
+<div class="contenedor_buscar">
+    <div class="laber_buscar">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Buscar...</mat-label>
+            <input matInput [(ngModel)]="buscar">
+        </mat-form-field>
+    </div>
+    <div class="boton_buscar">
+        <button mat-raised-button color="primary" (click)="buscar()"> Buscar cliente
+        </button>
+    </div>
+
+</div>
+
+
+
+<div class="contenido">
+    <div class="contenedor">
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="nombre">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Edad</mat-label>
+                <input type="number" matInput [(ngModel)]="edad">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Numero de Cedula</mat-label>
+                <input matInput [(ngModel)]="cedula">
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+<div class="contenido_botones">
+    <div class="boton">
+        <button mat-raised-button color="primary" *ngIf="mostraragregar" (click)="agregarClienteBoton()">Agregar Cliente
+
+        </button>
+    </div>
+    <div class="boton">
+        <button mat-raised-button color="primary" *ngIf="mostrareditar" (click)="editarClientes()"
+            (click)="mostrareditar=!mostrareditar" (click)="mostraragregar=!mostraragregar">Editar CLiente
+
+        </button>
+    </div>
+    <div class="boton">
+        <button mat-raised-button color="warn" (click)="eliminarClienteBoton()">
+            EliminarCliente
+        </button>
+    </div>
+
+</div>
+
+<div class="contenedor-todo">
+    <div class=" contenedor-tabla">
+        <div class="cabecera encabezado">
+            <p class="items-cabecera">Nombre</p>
+            <p class="items-cabecera">Edad</p>
+            <p class="items-cabecera">Cedula</p>
+            <p class="items-cabecera acciones">Acciones</p>
+        </div>
+
+        <div class="encabezado" *ngFor="let c of listaClientes">
+            <span class="items"> {{c.nombre}}</span>
+            <span class="items">{{c.edad}}</span>
+            <span class="items">{{c.cedula}}</span>
+            <div class="contenedor_botones">
+                <button mat-raised-button color="primary" (click)="editarCliente(c)"
+                    (click)="mostrareditar=!mostrareditar" (click)="mostraragregar=!mostraragregar">Editar
+
+                </button>
+                <button mat-raised-button color="warn" (click)="eliminarUnCliente(c)">Eliminar </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,97 @@
+.contenido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.formulario_estilos {
+    margin-top: -220px;
+    width: 400px;
+    background: #1312120a;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.label_input {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    margin-bottom: 11px;
+}
+
+.label {
+    width: 116px;
+}
+.input_estilo {
+    width: 200px;
+    border-radius: 5px;
+    border: solid 1px;
+}
+.alerta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8d7da;
+    color: #842029;
+    border-radius: 0.375em;
+    border: solid 1px #f5c2c7;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.contenedor-todo {
+    margin-top: 80px;
+    width: 900px;
+    background: #1312120a;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-tabla {
+    width: 860px;
+    height: 500px;
+    margin-top: 15px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    border: rgba(0, 0, 0, 0.139) solid 1px;
+    text-align: center;
+    height: 60px;
+    align-items: center;
+}
+
+.items {
+    width: 146px;
+    height: 36px;
+    border-right: rgba(0, 0, 0, 0.139) solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: auto;
+    padding: 3px;
+}
+
+.items-cabecera {
+    width: 146px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 14px;
+    border-right: rgba(0, 0, 0, 0.139) solid 1px;
+}
+.acciones {
+    width: 200px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 14px;
+}

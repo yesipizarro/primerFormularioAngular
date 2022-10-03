@@ -1,0 +1,115 @@
+<div class="contenido">
+    <div class="formulario_estilos">
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <div class="label_input">
+                <label class="label" for="nombre">Ingresa el Nombre</label>
+                <input class="input_estilo" placeholder="Kiara..." id="nombre" type="text" formControlName="nombre">
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['nombre']?.touched && formulario.controls['nombre']?.errors?.['required']">
+                El nombre es requerido!
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['nombre']?.touched && formulario.controls['nombre']?.errors?.['minlength']">
+                El nombre es de minimo 10 caracteres!
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['nombre']?.touched && formulario.controls['nombre']?.errors?.['maxlength']">
+                El nombre es de maximo 10 caracteres!
+            </div>
+
+            <div class="label_input">
+                <label class="label" for="cedula">Ingresa la cedula</label>
+                <input class="input_estilo" id="cedula" type="text" formControlName="cedula">
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['cedula']?.touched && formulario.controls['cedula']?.errors?.['required']">
+                Debe ingresar la cedula!
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['cedula']?.touched && formulario.controls['cedula']?.errors?.['minlength']">
+                Debe incresar minumo 6 caracteres !
+            </div>
+
+
+            <div class="label_input">
+                <label class="label" for="edad">Ingresa la Edad</label>
+                <input class="input_estilo" id="edad" type="number" formControlName="edad">
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['edad']?.touched && formulario.controls['edad']?.errors?.['required']">
+                Debe ingresar la edad!
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['edad']?.touched && formulario.controls['edad']?.errors?.['min']">
+                La edad minima es de 18 años !
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['edad']?.touched && formulario.controls['edad']?.errors?.['max']">
+                La edad maxima es de 60 años!
+            </div>
+
+            <div class="label_input">
+                <label class="label" for="correo">Ingresa el Correo</label>
+                <input class="input_estilo" id="correo" type="text" formControlName="correo">
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['correo']?.touched && formulario.controls['correo']?.errors?.['email']">
+                El correo es requerido!
+            </div>
+
+
+            <div class="label_input">
+                <label class="label" for="telefono">Ingresa el telefono</label>
+                <input class="input_estilo" id="telefono" type="number" formControlName="telefono">
+            </div>
+
+            <div class="alerta"
+                *ngIf="formulario.controls['telefono']?.touched && formulario.controls['telefono']?.errors?.['min']">
+                El telefomo es de minimo 10 caracteres !
+            </div>
+            <div class="alerta"
+                *ngIf="formulario.controls['edad']?.touched && formulario.controls['edad']?.errors?.['maxlength']">
+                El telefomo es de maximo 10 caracteres !
+            </div>
+
+            <div>
+                <button class="ancho" type="submit" *ngIf="!editando" [disabled]="!formulario.valid">Enviar</button>
+                <button class="ancho" *ngIf="editando" [disabled]="!formulario.valid"
+                    (click)="edicion()">GuardarCambios</button>
+
+            </div>
+
+        </form>
+    </div>
+
+    <div class="contenedor-todo">
+        <div class=" contenedor-tabla">
+            <div class="cabecera encabezado">
+                <p class="items-cabecera">Nombre</p>
+                <p class="items-cabecera">Edad</p>
+                <p class="items-cabecera">Cedula</p>
+                <p class="items-cabecera">Correo</p>
+                <p class="items-cabecera">Telefono</p>
+                <p class="acciones">Acciones</p>
+            </div>
+
+            <div class="encabezado" *ngFor="let c of listaClientesFormularioNuevo">
+                <span class="items"> {{c.nombre}}</span>
+                <span class="items">{{c.edad}}</span>
+                <span class="items">{{c.cedula}}</span>
+                <span class="items">{{c.correo}}</span>
+                <span class="items">{{c.telefono}}</span>
+                <div class="acciones">
+                    <button (click)="editarClienteFormulartio(c)">Editar</button>
+
+                    <button (click)="eliminarClienteFormulartio(c)">Eliminar</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

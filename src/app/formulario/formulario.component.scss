@@ -1,0 +1,96 @@
+.contenido {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedor {
+    right: 100px;
+    align-items: center;
+    display: flex;
+    width: 660px;
+    height: 145px;
+    justify-content: space-around;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: 1px solid #00f5d4;
+    padding: 10px;
+}
+
+.boton {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.contenido_botones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contenedor-todo {
+    display: flex;
+    justify-content: center;
+}
+.contenedor-tabla {
+    width: 48%;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-around;
+    border: rgba(0, 0, 0, 0.139) solid 1px;
+    text-align: center;
+    height: 60px;
+    align-items: center;
+}
+
+.items {
+    width: 146px;
+    height: 36px;
+    border: solid 1px #00f5d485;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.items-cabecera {
+    width: 146px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #00f5d47e;
+    margin-top: 14px;
+}
+.acciones {
+    width: 200px;
+}
+
+.contenedor_botones {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor_buscar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -65px;
+}
+
+.label_buscar {
+    min-width: 64px;
+}
+
+.boton_buscar {
+    margin-left: 30px;
+    margin-top: 8px;
+}
